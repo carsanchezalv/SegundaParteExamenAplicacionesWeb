@@ -1,0 +1,83 @@
+<%- include('header-loggeado'); -%>
+            <div class="pregunta">
+                <div class="contenidoPregunta">
+                    <p class="tituloPregunta"><%= datos.titulo %></p>
+                    <p class="numVisitas">Visto <%= datos.num_visitas %> veces</p>
+                    <div class="votos">
+                        <span><%= datos.num_votos %> </span>
+                        <span>votos</span>
+                        <div>
+                            <% let votoplus = "/preguntas/votopositivo/" + datos.id %>
+                            <% let votominus = "/preguntas/votonegativo/" + datos.id %>
+                            <a href= <%= votoplus %> class="parriba"><img src="/img/parriba.png"/></a>
+                            <a href= <%= votominus %> class="pabajo"><img src="/img/pabajo.png"/></a>
+                        </div>
+                    </div>
+                    <p class="textoRespuesta"><%= datos.cuerpo %></p>
+                    <div class="etiquetasPregunta">
+                    <% datos.etiquetas.forEach(aux => { %> 
+                        <% let tagPulsar = "/preguntas/etiquetadas/" + aux %>
+                            <a class="etiqueta" href=<%= tagPulsar %>>
+                                <%= aux %>
+                            </a>
+                    <% }) %>
+                    </div>
+                </div>
+                <div class="usuarioPregunta">
+                    <div class="fechaPregunta">
+                        Formulada el <%= datos.fecha %>
+                    </div>
+                    <% let imagen = "/preguntas/imagen/" + datos.email %> 
+                    <% let number = "/usuarios/perfil/" + datos.numUsuario %>
+                    <a href=<%=number%>><img class="iconoUsuarioPregunta" src=<%= imagen %>></a>
+                    <div class="nombreUsuarioPregunta">
+                        <a href=<%=number%>><%= datos.nombre %></a>
+                    </div>
+                </div>
+            </div>
+                <hr>
+                <h2>RESPUESTAS A LA PREGUNTA</h2>
+                <hr>
+
+            <div class="respuestas">
+                <% datos.respuestas.forEach(resp =>{ %>
+                    <div class="respuesta">
+                        <div class="votos">
+                            <span><%= resp.num_votos %> </span>
+                            <span>votos</span>
+                            <div>
+                                <% let votoplusR = "/preguntas/votopositivo/" + datos.id + "/" + resp.id%>
+                                <% let votominusR = "/preguntas/votonegativo/" + datos.id + "/" + resp.id%>
+                                <a href= <%= votoplusR %> class="parriba"><img src="/img/parriba.png"/></a>
+                                <a href= <%= votominusR %> class="pabajo"><img src="/img/pabajo.png"/></a>
+                            </div>
+                        </div>
+                        <div class="cuerpoRespuesta">
+                            <div class="textoRespuesta">
+                                <p><%= resp.cuerpo %></p>
+                            </div>
+                            <div class="usuarioPregunta">
+                                <div class="fechaPregunta">
+                                    Respondida el <%= resp.fecha %>
+                                </div>
+                                <% let imagenR = "/preguntas/imagen/" + resp.id_usuario %>
+                                <% let number = "/usuarios/perfil/" + resp.numUsuario %> 
+                                <a href=<%=number%>><img class="iconoUsuarioPregunta" src=<%= imagenR %>></a>
+                                <div class="nombreUsuarioPregunta">
+                                    <a href=<%=number%>> <%= resp.nombreUsuario %> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>                
+            </div>
+            <% let idpr = "/preguntas/formularrespuesta/" + datos.id %>
+            <form class="formulario" method="POST" action= <%= idpr %> >
+                <div class="responder">
+                    <h2>Escribe tu respuesta</h2>
+                    <div class="textFormular"><textarea class="respuestaForm" name="respuesta" required autocomplete="off" required rows="10"></textarea> </div>
+                    <div class="botonForm"><button type="submit" class="formular">Añade tu respuesta!</button></div>
+                </div>
+            </form>
+        </div>    
+<%- include('footer'); -%>

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background:#294357;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contenido {
+    position: relative;
+    top: 250px;
+    height: 100%;
+    margin-left: 30px;
+}
+
+button {
+    background-color: rgb(151, 197, 224);
+    padding: 5px;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid hotpink;
+    background-color: pink;
+    color: black;
+}
+
+.error {
+    text-align: center;
+    justify-content: center;
+}
+
+.danger {
+  color: white;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: rgba(255, 0, 0, 0.808);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.danger > img {
+  width: 100px;
+}

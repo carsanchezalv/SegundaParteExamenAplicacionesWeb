@@ -1,0 +1,10 @@
+<%- include('header-loggeado'); -%>
+            <% if(errorMsg) { %>
+                <div class="danger">
+                  <img src="/img/danger.png">
+                  <p class="error"><%= errorMsg %></p>
+                  <img src="/img/danger.png">
+                </div>
+            <% } %>
+        </div>
+<%- include('footer'); -%>

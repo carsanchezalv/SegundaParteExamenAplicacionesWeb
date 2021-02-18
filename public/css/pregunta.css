@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background:#294357;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.usuario {
+    width: 20%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+.usuario > img {
+    height: 55%;
+    border-radius: 100%;
+}
+.contenido {
+    position: relative;
+    top: 250px;
+    height: 100%;
+    width: 70%;
+    margin-left: 30px;
+    color: lavender;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background-color: rgb(151, 197, 224);
+    padding: 5px;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid hotpink;
+    background-color: pink;
+    color: black;
+}
+
+.etiquetasPregunta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.etiqueta {
+    text-decoration: none;
+    margin-right: 15px;
+    background-color: aquamarine;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.etiqueta:hover {
+    background-color: yellow;
+    color: blue;
+}
+
+.tituloPregunta {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: x-large;
+    color: #294357;
+    background-color: lavender;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.votos {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: larger;
+    background-color:teal ;
+    padding: 5px;
+}
+
+.numVisitas {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: larger;
+    background-color: lightsalmon;
+    color: #294357;
+    padding: 5px;
+}
+
+
+.parriba img {
+    margin-top: 5px;
+    width: 35px;
+}
+
+.pabajo img {
+    margin-top: 5px;
+    width: 35px;
+}
+
+.parriba img:hover, .pabajo img:hover {
+    width: 40px;
+    margin-top: 0;
+}
+
+.pabajo, .parriba {
+    background: none;
+    border: 0px;
+}
+
+.pabajo:hover, .parriba:hover {
+    background: none;
+    border: 0px;
+}
+
+.respuestas {
+    margin-left: 160px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.respuesta {
+    display: flex;
+    flex-direction: column;
+    border: 10px dotted hotpink ;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+
+.cuerpoRespuesta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.usuarioPregunta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: lightsteelblue
+}
+
+.iconoUsuarioPregunta {
+    max-height: 100px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.textoRespuesta {
+    margin-right: 10px;
+    font-size: larger;
+}
+
+.usuarioPregunta {
+    margin-left: 10px;
+}
+
+.pregunta {
+    margin-bottom: 35px;
+    border: 10px dotted greenyellow ;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.respuestaForm {
+    width: 1000px;
+    padding: 10px;
+    font-size: large;
+}
+
+.formular {
+    display: inline-block;
+}
+
+.formulario > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.responder {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botonForm {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.responder > h2 {
+    margin-bottom: 10px;
+}
+
+.nombreUsuarioPregunta > a {
+    text-decoration: none;
+    height: 55%;
+    background-color: none;
+}
+
+.nombreUsuarioPregunta a {
+    font-size: larger;
+    margin-top: 8px;
+    color: white;
+    background-color: none;
+}
+
+.nombreUsuarioPregunta a:hover {
+    font-weight: bold;
+    color: yellow;
+    background-color: none;
+}
+
+.fechaPregunta {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>404</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="/css/cabecera-loggeado.css">
+        <link rel="icon" type="png" href="/img/logo404.png">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="/javascripts/etiquetas.js"></script>
+        <%- styles %>
+    </head>
+    <body>
+        <header class="cabecera">
+            <div class="menu">
+                <a class="boton" href="/preguntas">Preguntas</a>
+                <a class="boton" href="/preguntas/sinresponder">Sin responder</a>
+                <a class="boton" href="/usuarios/">Usuarios</a>
+            </div>
+            <img src="/img/logo404.png">
+            <div class="usuario">
+                <% let number = "/usuarios/perfil/" + numero %>
+                <a href=<%=number%>><img src="/index/imageName"></a>
+                <a href=<%=number%>><p><%= nombre %></p></a>
+                <a class="boton" href="/loginout/logout">Cerrar sesión</a>
+            </div>
+        </header>
+        <div class="contenido">
+            <form action="/preguntas/buscar" class="buscador" method="GET">            
+                <button type="submit" class="buscar">Buscar</button>
+                <input type="search" name="busqueda" required autocomplete="off" placeholder="Buscar por título/cuerpo de pregunta"/>
+            </form>

@@ -1,0 +1,78 @@
+<%- include('header-loggeado'); -%>
+            <div class="personitaEstadisticas">
+                <div class="personita">
+                    <% let imagen = "/preguntas/imagen/" + datos.email %> 
+                    <img src=<%= imagen %>>
+                    <p class="nombre"><%= datos.nombre %></p>
+                    <p class="fecha">Miembro desde <%= datos.fecha_alta %></p>
+                </div>
+                <div class="estadisticas">
+                    <p class="tituloEstadisticas">
+                        Estadísticas
+                    </p>
+                    <div class="datos">
+                        <div class="preguntas">
+                            <p class="campo">Preguntas</p>
+                            <p class="numero"><%= datos.num_preguntas %></p>
+                        </div>
+                        <div class="reputacion">
+                            <p class="campo">Reputación</p>
+                            <p class="numero"><%= datos.reputacion %></p>
+                        </div>
+                        <div class="respuestas">
+                            <p class="campo">Respuestas</p>
+                            <p class="numero"><%= datos.num_respuestas %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="tituloMedallas">Medallas</p>
+            <div class="medallas">
+                <div class="bronce">
+                    <div class="titulo">
+                        <p class="campo">BRONCE</p>
+                        <p class="dato"><%= bronce %></p>
+                    </div>
+                    <div class="motivos">
+                        <% bronces.forEach(br => { %>
+                            <span><%= br.nombre %>
+                                <% if(br.cont > 1) {%>
+                                    [x<%=br.cont%>]
+                                <% } %>
+                            </span>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="plata">
+                    <div class="titulo">
+                        <p class="campo">PLATA</p>
+                        <p class="dato"><%= plata %></p>
+                    </div>
+                    <div class="motivos">
+                        <% platas.forEach(pl => { %>
+                            <span><%= pl.nombre %>
+                                <% if(pl.cont > 1) {%>
+                                    [x<%=pl.cont%>]
+                                <% } %>
+                            </span>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="oro">
+                    <div class="titulo">
+                        <p class="campo">ORO</p>
+                        <p class="dato"><%= oro %></p>
+                    </div>
+                    <div class="motivos">
+                        <% oros.forEach(or => { %>
+                            <span><%= or.nombre %>
+                                <% if(or.cont > 1) {%>
+                                    [x<%=or.cont%>]
+                                <% } %>
+                            </span>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+<%- include('footer'); -%>

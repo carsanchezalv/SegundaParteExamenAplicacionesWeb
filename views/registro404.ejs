@@ -1,0 +1,40 @@
+<%- include('header'); -%>
+        <div class="contenido">
+            <% if(errorMsg) { %>
+                <div class="danger">
+                  <img src="/img/danger.png">
+                  <p class="error"><%= errorMsg %></p>
+                  <img src="/img/danger.png">
+                </div>
+            <% } %>
+            <div class = formulario>
+                <form action="/loginout/registro" method="post" enctype="multipart/form-data">
+          
+                    <div class="field-wrap">
+                        <input type="email" name="email" required autocomplete="off" placeholder="Email*"/>
+                    </div>
+
+                     <div class="field-wrap">
+                        <input type="password" name="pass1" required autocomplete="off" placeholder="Contraseña*"/>
+                    </div>
+
+                    <div class="field-wrap">
+                        <input type="password" name="pass2" required autocomplete="off" placeholder="Confirmar contraseña*"/>
+                    </div>
+
+                    <div class="field-wrap">
+                        <input type="text" name="nombre" required autocomplete="off" placeholder="Nombre para mostrar*"/>
+                    </div>
+
+                    <div class="field-wrap">
+                        <p id="textoImg">Imagen de perfil</p>
+                        <input type="file" name="foto"/>
+                    </div>
+
+                    <button type="submit" class="button button-block"/>Registrarse</button>
+                    <a href="/loginout/login" class="button button-block">Volver al login</a>
+                  </form>
+                  
+            </div>
+        </div>
+<%- include('footer'); -%>

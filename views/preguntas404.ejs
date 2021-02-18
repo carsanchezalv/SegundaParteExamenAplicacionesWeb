@@ -1,0 +1,50 @@
+<%- include('header-loggeado'); -%>
+            <div class="info">
+                <span class="numPreguntas">
+                    <%= contador %> preguntas
+                </span>
+                <span class="todas">
+                    <%= encabezado %>
+                </span>
+                <a class="boton" href="/preguntas/formular" class="formular">
+                    Formular una pregunta
+                </a>
+            </div>
+            <div class="preguntas">
+                <% if(datos != null) { %>
+                    <% datos.forEach(preg => { %>
+                        <div class="pregunta">
+                            <div class="contenidoPregunta">
+                                <div class="tituloPregunta">
+                                    <% let pregu = "/preguntas/" + preg.id %>
+                                    <a href=<%= pregu %>><%= preg.titulo %></a>
+                                </div>
+                                <div class="cuerpoPregunta">
+                                    <%= preg.cuerpo %>
+                                </div>
+                                <div class="etiquetasPregunta">
+                                    <% preg.etiquetas.forEach(etiq => {%>
+                                        <% let tagPulsar = "/preguntas/etiquetadas/" + etiq %>
+                                        <a class="etiqueta" href=<%= tagPulsar %>>
+                                            <%= etiq %>
+                                        </a>
+                                    <% }) %> 
+                                </div>
+                            </div>
+                            <div class="usuarioPregunta">
+                                <div class="fechaPregunta">
+                                    Formulada el <%= preg.fecha %>
+                                </div>
+                                <% let imagen = "/preguntas/imagen/" + preg.email %> 
+                                <% let number = "/usuarios/perfil/" + preg.numUsuario %>
+                                <a href=<%= number %> ><img class="iconoUsuarioPregunta" src=<%= imagen %>></a>
+                                <div class="nombreUsuarioPregunta">
+                                    <a href="number"><%= preg.nombre %></a>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                <%}%>
+            </div>
+        </div>
+<%- include('footer'); -%>

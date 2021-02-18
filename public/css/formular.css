@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background:#294357;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.usuario {
+    width: 20%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+.usuario > img {
+    height: 55%;
+    border-radius: 100%;
+}
+
+.contenido {
+    position: relative;
+    top: 250px;
+    height: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+button {
+    background-color: rgb(151, 197, 224);
+    padding: 5px;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid hotpink;
+    background-color: pink;
+    color: black;
+}
+
+.formularioPregunta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.info {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.numPreguntas, .formular {
+    align-self: flex-end;
+}
+
+.formular {
+    padding: 2px;
+    font-size: medium;
+    width: 120px;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    color: lavender;
+    margin-bottom: 10px;
+}
+
+.apartado {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.meterTexto {
+    width: 70%;
+    padding: 10px;
+}
+
+.formularPregunta {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.textoCuerpo{
+    height: 120px;
+}
+.sub{
+    margin: 2px;
+    font-size:small;
+}
+
+.titulos {
+    font-size: x-large;
+}
+
+.meterTexto {
+    border: 1px solid hotpink;
+}
+
+.publicar {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.etiqjquery {
+    padding: 5px;
+    background-color: green;
+    color:white;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.etiqjquery:hover {
+    background-color: yellow;
+    color:black;
+    cursor: pointer;
+}

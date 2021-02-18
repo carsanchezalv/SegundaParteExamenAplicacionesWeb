@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background:#294357;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.usuario {
+    width: 20%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.usuario > img {
+    height: 55%;
+    border-radius: 100%;
+}
+
+.contenido {
+    position: relative;
+    top: 250px;
+    height: 100%;
+    margin-left: 30px;
+}
+
+button {
+    background-color: rgb(151, 197, 224);
+    padding: 5px;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid hotpink;
+    background-color: pink;
+    color: black;
+}
+
+.personita {
+    width: 400px;
+    height: auto;
+    margin-left: 15px;
+    border: 10px double hotpink;
+    border-radius: 30px;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.personita img {
+    width: 90px;
+    height: auto;
+    border-radius: 50%
+}
+
+.personita > .nombre {
+    color:white;
+    font-size: x-large;
+}
+
+.personita > .fecha {
+    color:white;
+}
+
+.personitaEstadisticas {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    width: 70%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.estadisticas {
+    margin-left: 50px;
+    width: 100%;
+}
+
+.tituloEstadisticas {
+    background-color: white;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.datos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+}
+
+.preguntas, .respuestas {
+    align-self: flex-end;
+}
+
+.preguntas, .respuestas, .reputacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    color:white;
+}
+
+.datos .numero {
+    font-weight: bold;
+    font-size: x-large;
+    color:hotpink;
+}
+
+.tituloMedallas {
+    background-color: white;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    width: 75%;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.medallas {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bronce, .plata, .oro {
+    width: 30%;
+}
+.bronce, .plata {
+    margin-right: 30px;
+}
+.bronce .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: peru;
+    border-radius: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+.plata .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: silver;
+    border-radius: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+.oro .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: goldenrod;
+    border-radius: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+.titulo .campo {
+    font-size: x-large;
+}
+.motivos {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.motivos > span {
+    background-color: brown;
+    margin-bottom: 10px;
+    color:white;
+    padding: 15px;
+    border-radius: 30px;
+}

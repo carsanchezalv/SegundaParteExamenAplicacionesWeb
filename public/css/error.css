@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    height: 100%;
+    background:#294357;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contenido {
+    position: relative;
+    top: 250px;
+    height: 100%;
+    margin-left: 30px;
+}
+
+h1, h2{
+    color: hotpink;
+}

@@ -1,0 +1,26 @@
+<%- include('header-loggeado'); -%>
+            <p class = "usuariosTitulo"><%= encabezado %></p>
+            <form action="/usuarios/filtrar" class="filtroUsuario" method="GET">            
+                <input name="filtro" type="search" required autocomplete="off" placeholder="Filtrar por usuario"/>
+                <button class="filtrar">Filtrar</button>
+            </form>
+            <div class="usuarios">
+                <% datos.forEach(us => { %>
+                    <div class="usuario2">
+                        <% let number = "/usuarios/perfil/" + us.num_usuario %>
+                        <% let imagen = "/preguntas/imagen/" + us.email %>
+                        <a href=<%= number %>><img src=<%= imagen %>></a>
+                        <a href=<%= number %> class="nombre"><%= us.nombre%></a>
+                        <p class="reputacion"><%= us.reputacion %></p>
+                        
+                        <% if(us.etiqueta_mas_usada) { %>
+                            <% let tagPulsar = "/preguntas/etiquetadas/" + us.etiqueta_mas_usada %>
+                            <a class="etiqueta" href=<%= tagPulsar %>>
+                                <%= us.etiqueta_mas_usada %>
+                            </a>
+                        <% } %>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+<%- include('footer'); -%>

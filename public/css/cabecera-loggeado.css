@@ -1,0 +1,103 @@
+.cabecera {
+    height: 200px;
+    background-color: #193347; 
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    top:0;
+    border-bottom: 20px double hotpink;
+}
+
+.cabecera > img {
+    display: block;
+    height: 50%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+    margin-left: 50px;
+    height: 80%;
+}
+
+.buscador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.buscador input {
+    padding: 10px;
+    width: 700px;
+    margin-left: 10px;
+}
+
+button, div > .boton {
+    background-color: rgb(151, 197, 224);
+    padding: 5px;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, div > .boton:hover {
+    border: 2px solid hotpink;
+    background-color: pink;
+    color: black;
+}
+
+.usuario {
+    width: 20%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+.usuario img {
+    background-color: none;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.usuario p {
+    font-size: larger;
+    margin-top: 8px;
+    color: white;
+    background-color: none;
+}
+
+.usuario p:hover {
+    font-weight: bold;
+    color: yellow;
+    background-color: none;
+}
+
+/*
+.usuario > a > img:hover {
+    height: 95%;
+    border: 5px solid hotpink;
+}
+*/
+
+.usuario > a {
+    text-decoration: none;
+    height: 55%;
+    background-color: none;
+}
+
+.usuario > .boton {
+    height: min-content;
+}

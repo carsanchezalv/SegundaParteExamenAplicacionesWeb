@@ -1,0 +1,30 @@
+<%- include('header-loggeado'); -%>
+            <div class="todo">
+                <div class="apartado">
+                    <p class="formularPregunta">Formular una pregunta</p>
+                    <p class="titulos">Título</p>
+                    <p class="sub">Sé específico e imagina que estás haciendo una pregunta a otra persona</p>
+                    
+                    <form action="/preguntas/formular" class="formularioPregunta" method="POST">
+                        <input name="textoTitulo" class="textoTitulo meterTexto" type="text" required autocomplete="off" placeholder="¿Cuál es tu pregunta sobre programación de aplicaciones web?"/>
+                </div>
+                <div class="apartado">
+                    <p class="titulos">Cuerpo</p>
+                    <p class="sub">Incluye toda la información que alguien necesitaría para responder tu pregunta</p>
+                    <textarea name="textoCuerpo" class="textoCuerpo meterTexto" required rows="20"></textarea>
+                </div>
+                <div class="apartado">
+                    <p class="titulos">Etiquetas</p>
+                    <p class="sub">Añade hasta 5 etiquetas para describir sobre qué trata tu pregunta</p>
+                    <input name="textoEtiqueta" class="textoEtiqueta meterTexto" type="text" autocomplete="off" placeholder="Por ejemplo: @node@express">
+                </div>
+                <div class="apartado">
+                    <% etiquetas.forEach(e => { %>
+                        <span class="etiqjquery"><%=e%></span>
+                    <% }) %>
+                </div>
+                <button type="submit" class="publicar apartado">Publica tu pregunta</button>
+            </form>
+            </div>
+        </div>
+<%- include('footer'); -%>

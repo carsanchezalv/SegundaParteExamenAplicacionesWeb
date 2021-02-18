@@ -1,0 +1,18 @@
+.cabecera {
+    height: 200px;
+    background-color: #193347; 
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top:0;
+    border-bottom: 20px double hotpink;
+}
+
+.cabecera > img{
+    display: block;
+    height: 70%;
+}
